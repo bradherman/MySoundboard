@@ -5,6 +5,17 @@
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'></script>
+  <script type='text/javascript'>
+    $(document).ready(function(){
+      $('#login_tab').click(function(){
+        if ($('#login').hasClass('open'))
+          $('#login').animate({top:'-100px'},750).removeClass('open');
+        else
+          $('#login').animate({top:'0px'},750).addClass('open');
+      });      
+    })
+  </script>
 </head>
 <body>
 
